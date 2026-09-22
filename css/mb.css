@@ -725,7 +725,7 @@ body {
     .scetion01 .tit_txtbox {
         padding: 0 25px;
         margin-bottom: 55px;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: 600;
         text-align: center;
     }
@@ -802,7 +802,7 @@ body {
     }
 
     .section02 h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .section02 .content {
@@ -870,7 +870,7 @@ body {
     }
 
     .section03 .txt h2 {
-        font-size: 30px;
+        font-size: 28px;
         flex-shrink: 0;
     }
 
