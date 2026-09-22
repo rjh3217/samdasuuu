@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>삼다수</title>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+  <!-- gsap -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+  <!-- 제이쿼리 -->
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/commin.css">
+  <link rel="stylesheet" href="css/r_common.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive_main.css">
+</head>
+
+<body>
+  <div class="gotop_wrap">
+    <a href="#sc1">
+      <div class="gtxt">
+        <p>TOP</p>
+      </div>
+      <a href="#sc1" class="ellips_w">
+        <img src="images/common/Ellipse 33.png" alt="물방울">
+      </a>
+      <a href="#sc1" class="ellips_b">
+        <img src="images/common/elip.png" alt="물방울">
+      </a>
+    </a>
+    <div class="gotop hover">
+      <a href="sub_2.html" class="warterr">
+        <img src="images/common/gopage.png" alt="물병이미지">
+      </a>
+      <a href="sub_2.html" class="b_txt">경품추천 -></a>
+    </div>
+  </div>
+  <header>
+    <div class="inner">
+      <nav>
+        <ul class="hd_menu">
+          <li><a href="sub_1.html">STORY</a></li>
+
+          <li>
+            <div class="hd_logo">
+
+              <a href="index.html" class="logo_white">
+                <img src="images/common/logo_white.png" alt="흰색 로고">
+              </a>
+
+              <a href="index.html" class="logo_blue">
+                <img src="images/common/logo_blue.png" alt="파란 로고">
+              </a>
+
+            </div>
+          </li>
+
+          <li><a href="sub_2.html">EVENT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- 모바일 헤더 -->
+
+  <div class="mobile_header">
+
+    <!-- 햄버거 버튼 -->
+    <button type="button" class="mobile_menu_btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <!-- 모바일 메뉴 -->
+    <div class="mobile_menu">
+
+      <!-- 메뉴 상단 -->
+      <div class="mobile_menu_top">
+
+        <!-- 로고 -->
+        <a href="index.html" class="mobile_logo">
+          <img src="images/common/logo_blue.png" alt="삼다수">
+        </a>
+
+        <!-- 닫기 버튼 -->
+        <button type="button" class="mobile_close">
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+
+      <!-- 메뉴 -->
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="sub_1.html">STORY</a></li>
+          <li><a href="sub_2.html">EVENT</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+  <main>
+    <section class="intro sc1" id="sc1">
+      <!-- 스와이퍼 -->
+      <div class="swiper intro_swiper">
+        <div class="swiper-wrapper">
+          <!-- 1 -->
+          <div class="swiper-slide">
+            <div class="txt_box">
+              <h1>당신의 선택으로<br><span class="blue">시작되는 순환</span></h1>
+              <!-- 참여하기 버튼 -->
+              <div class="btn">
+                <a href="sub_2.html">
+                  참여하기
+                  <img src="images/main/arrow_10.svg" alt="바로가기아이콘">
+                </a>
+              </div>
+            </div>
+            <!-- 배경으로 넣을 비디오 -->
+            <div class="video-box">
+              <video src="video/amdasoo.mp4" autoplay muted loop playsinline></video>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="swiper-slide slide_02">
+            <div class="txt_box">
+              <h1>지구는 지금<br>우리의 <span class="blue">선택</span>을 기다립니다</h1>
+              <!-- 참여하기 버튼 -->
+              <div class="btn">
+                <a href="sub_2.html">
+                  참여하기
+                  <img src="images/main/arrow_10.svg" alt="바로가기아이콘">
+                </a>
+              </div>
+            </div>
+            <img src="images/main/introbg2.jpg" alt="인트로이미지2" class="respon425">
+          </div>
+          <!-- 3 -->
+          <div class="swiper-slide">
+            <div class="txt_box">
+              <h1>버려짐의 끝에서<br><span class="slide03">새로운 시작이</span> 탄생합니다.</h1>
+              <!-- 참여하기 버튼 -->
+              <div class="btn">
+                <a href="sub_2.html">
+                  참여하기
+                  <img src="images/main/arrow_10.svg" alt="바로가기아이콘">
+                </a>
+              </div>
+            </div>
+            <img src="images/main/introbg3.jpg" alt="인트로이미지3">
+          </div>
+        </div>
+        <div class="swiper-pagination intro_pagination"></div>
+      </div>
+    </section>
+    <section class="why sc2">
+      <div class="why_inner">
+        <div class="txt_box">
+          <h2>왜 병을<br> <span>다시 모아야 할까요?</span></h2>
+
+          <p>삼다수는 <b>제주의 청정한 자연</b>에서 시작되었습니다.<br> 그 물을 담았던 병이 다시 자연으로 돌아가지 못한다면 우리가 지켜야 할<br> 청정함도 함께 사라지는 셈이죠.</p>
+
+          <p>그래서 저희 삼다수는 <b>PET 수거 캠페인</b>을 시작했습니다.<br> <b>한 병이 다시 한 병</b>으로 태어날 수 있도록 그 순환의 시작에</p>
+          <p>여러분을 초대합니다.</p>
+
+          <!-- 참여하기 버튼 -->
+          <div class="btn">
+            <a href="sub_2.html">참여하기
+              <img src="images/main/arrow_10.svg" alt="바로가기아이콘">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="circle sc3">
+      <div class="circle_inner">
+        <h2>끝이 아닌,<br><span>순환의 시작</span></h2>
+        <div class="circle_slide">
+          <!-- 원 모양 배경 -->
+          <div class="circle_bg">
+
+            <!-- 원 안에 있는 선 -->
+            <div class="circle_line"></div>
+
+            <!-- 텍스트 -->
+            <div class="tab_circle">
+              <div class="txtbox on">
+                <!-- 1 -->
+                <span>1</span>
+                <p class="text">사용 후 배출된 페트병</p>
+              </div>
+              <!-- 2 -->
+              <div class="txtbox">
+                <span>2</span>
+                <p class="text">페트병<br> 수거</p>
+              </div>
+              <!-- 3 -->
+              <div class="txtbox">
+                <span>3</span>
+                <p class="text">세척하고 분쇄 후<br> 새로운 원료로 탄생</p>
+              </div>
+              <!-- 4 -->
+              <div class="txtbox">
+                <span>4</span>
+                <p class="text">재탄생</p>
+              </div>
+            </div>
+            <!-- 원 안에 있는 이미지 -->
+            <div class="circlelitem_rwap">
+              <div class="circle_img on">
+                <p class="img_txt">쓰레기 배출</p>
+                <img src="images/main/circle_img1.png" alt="쓰레기 배출">
+              </div>
+              <div class="circle_img">
+                <p class="img_txt">쓰레기 수거</p>
+                <img src="images/main/circle_img2.png" alt="쓰레기 수거">
+              </div>
+              <div class="circle_img">
+                <p class="img_txt">재공정</p>
+                <img src="images/main/circle_img3.png" alt="재공정">
+              </div>
+              <div class="circle_img">
+                <p class="img_txt">새 제품 탄생</p>
+                <img src="images/main/circle_img4.png" alt="새 제품 탄생">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="together sc4">
+      <div class="together_inner">
+        <div class="content">
+          <h2>순환의 첫걸음,<br> <span>삼다수</span><b>와 함께해요</b></h2>
+          <div class="cardbox">
+            <div class="card">
+              <img src="images/main/together_icon1.svg" alt="분리하고">
+              <p>분리하고</p>
+            </div>
+            <div class="card">
+              <img src="images/main/together_icon2.svg" alt="배출해서">
+              <p>배출해서</p>
+            </div>
+            <div class="card">
+              <img src="images/main/together_icon3.svg" alt="인증하기">
+              <p>인증하기</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="gift sc5">
+      <div class="gift_inner">
+        <h2>나의 실천이<br> <span>지구에게 건네는 선물</span></h2>
+        <div class="gift_grid">
+          <!-- 배지 -->
+          <div class="giftlist wide">
+            <div class="img_rwap">
+              <img src="images/main/gift_badge.png" alt="에코뱃지">
+            </div>
+            <div class="txt_box">
+              <span>01</span>
+              <p>에코 배지 세트</p>
+            </div>
+          </div>
+          <!-- 실팔찌 -->
+          <div class="giftlist normal">
+            <div class="img_rwap">
+              <img src="images/main/gift_bracelet.png" alt="에코 실팔찌">
+            </div>
+            <div class="txt_box">
+              <span>02</span>
+              <p>에코 실팔찌</p>
+            </div>
+          </div>
+          <!-- 텀블러 -->
+          <div class="giftlist normal">
+            <div class="img_rwap">
+              <img src="images/main/gift_tumbler.png" alt="에코뱃지">
+            </div>
+            <div class="txt_box">
+              <span>03</span>
+              <p>에코 텀블러</p>
+            </div>
+          </div>
+          <!-- 키링 -->
+          <div class="giftlist wide">
+            <div class="img_rwap">
+              <img src="images/main/gift_keychain.png" alt="에코 실팔찌">
+            </div>
+            <div class="txt_box">
+              <span>04</span>
+              <p>에코 키링</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="change sc6">
+      <div class="change_inner">
+        <div class="txt_box">
+          <h2>우리의 <span>작은</span><br> <b>실천이 만든 변화</b></h2>
+          <!-- 참여하기 버튼 -->
+          <div class="btn">
+            <a href="sub_2.html">
+              참여하기
+              <img src="images/main/arrow_10.svg" alt="바로가기아이콘">
+            </a>
+          </div>
+        </div>
+        <!-- 스와이프 -->
+        <div class="swiper change_swiper">
+          <div class="swiper-wrapper">
+            <!-- 1 -->
+            <div class="swiper-slide">
+              <div class="iconbox">
+                <img src="images/main/icon1.png" alt="패트병이미지" class="peticon">
+                <div class="txtbox">
+                  <span>PET병 회수율</span>
+                  <img src="images/main/text_01.svg" alt="회수율" class="pettxt">
+                </div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="swiper-slide">
+              <div class="iconbox">
+                <img src="images/main/icon2.png" alt="공장이미지" class="pactoryicon">
+                <div class="txtbox">
+                  <span>공공부분 온실가스</span>
+                  <img src="images/main/text_02.svg" alt="온실가스 감축율" class="pactorytxt">
+                </div>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="swiper-slide">
+              <div class="iconbox">
+                <img src="images/main/icon3.png" alt="공장이미지" class="cloudicon">
+                <div class="txtbox">
+                  <span>연평균 재활용 빗물</span>
+                  <img src="images/main/text_03.svg" alt="온실가스 감축율" class="cloudtxt">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer>
+    <div class="footer_inner">
+      <div class="up">
+        <div class="up_txtbox">
+          <a href="#">
+            <h2>개인정보처리방침</h2>
+          </a>
+          <a href="#">
+            <h2>저작권보호정책</h2>
+          </a>
+        </div>
+        <div class="logo">
+          <a href="https://www.youtube.com/channel/UCxBXdBnpmKuIKGByqx1GY8g/videos"><img src="images/common/youtube.svg"
+              alt="유튜브 로고"></a>
+          <a href="https://www.facebook.com/samdasoostory/?locale=ko_KR"><img src="images/common/facebook.svg"
+              alt="페이스북 로고"></a>
+          <a href="https://www.instagram.com/samdasoostory/"><img src="images/common/instar.svg" alt="인스타 로고"></a>
+          <a href="https://post.naver.com/"><img src="images/common/naver.svg" alt="네이버 로고"></a>
+        </div>
+      </div>
+      <div class="down_txtbox">
+        <p>제주특별자치도 제주시 조천읍 남조로 1717-35</p>
+        <p>대표전화 : (064)780-3300, (국번없이)1636 (제주개발공사 또는 삼다수를 말하세요!) 팩스 : (064)784-5020</p>
+        <p>Copyright© 2018 제주특별자치도개발공사. All Rights Reserved.</p>
+      </div>
+      <div class="samdasu_logo">
+        <img src="images/common/foot_logo 2.svg" alt="삼다수로고">
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+/* footer */
+
+
+@media screen and (max-width: 1440px) {
+    footer {
+        padding: 75px 170px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    footer {
+        padding: 70px 80px;
+        height: 280px
+    }
+
+    .footer_inner {
+        gap: 30px;
+    }
+
+    .footer_inner .up_txtbox {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .footer_inner .down_txtbox {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .footer_inner .logo {
+        gap: 12px;
+    }
+
+    .footer_inner .logo a {
+        width: 30px;
+    }
+
+    .footer_inner .samdasu_logo {
+        width: 120px;
+    }
+
+    .footer_inner .samdasu_logo img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* ==================================================
+       HEADER
+    ================================================== */
+
+    header {
+        display: none !important;
+    }
+
+    .mobile_header.on .mobile_menu_btn span {
+        background-color: var(--main_color) !important;
+    }
+
+    .mobile_header {
+        display: block !important;
+    }
+
+    .respon {
+        display: block !important;
+    }
+
+    footer {
+        padding: 28px 45px;
+    }
+
+    .footer_inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .footer_inner .up {
+        display: flex;
+    }
+
+    .footer_inner .up_txtbox {
+        gap: 30px;
+    }
+
+    .footer_inner .samdasu_logo {
+        justify-self: center;
+        align-self: flex-start;
+    }
+
+    .footer_inner .logo {
+        gap: 10px;
+    }
+
+    .footer_inner .down_txtbox {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /* ==================================================
+       GOTOP
+    ================================================== */
+
+    .gotop_wrap .gtxt p {
+        font-size: 12px;
+    }
+
+    .gotop_wrap .gtxt {
+        top: 22px;
+    }
+
+    .gotop_wrap {
+        right: 10px;
+        bottom: 10px;
+        gap: 5px;
+    }
+
+    .gotop_wrap .ellips_w,
+    .gotop_wrap .ellips_b {
+        width: 38px;
+        max-width: 38px;
+    }
+
+
+    .gotop_wrap .gotop.hover .warterr {
+        display: block;
+        width: 25px;
+    }
+
+    .gotop_wrap .gotop.hover .warterr img {
+        width: 100%;
+        height: auto;
+        /* animation: none; */
+    }
+
+    .gotop_wrap .ellips_w,
+    .gotop_wrap .ellips_b {
+        width: 30px;
+    }
+
+
+    .btn_wrap {
+        transform: scale(0.75) !important;
+        margin-top: 10%;
+    }
+
+    .btn .arrow img {
+        padding-top: 2px;
+    }
+
+
+}
+
+@media screen and (max-width: 769px) {
+    .gotop_wrap .gotop.hover .b_txt  {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(35%, 0);
+
+        padding: 5px 9px;
+        border-width: 1px;
+        font-size: 12px;
+        background: rgba(250, 250, 250, 0.5);
+    }
+
+    .gotop.hover:hover .b_txt {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(35%, 0);
+    }
+
+    .gotop_wrap .gotop.hover .b_txt {
+        animation: s_box 1s infinite;
+        right: 55px;
+    }
+
+    @keyframes s_box {
+        0% {
+            transform: translate(35%, 0) scale(1);
+        }
+
+        50% {
+            transform: translate(35%, 0) scale(0.9);
+        }
+
+        100% {
+            transform: translate(35%, 0) scale(1);
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .footer_inner .up_txtbox {
+        gap: 14px;
+        font-size: 12px;
+    }
+
+    .footer_inner .logo {
+        gap: 6px;
+    }
+
+    .footer_inner .logo a {
+        width: 25px;
+    }
+
+    .sc5 .inner .container .grid_box_wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sc3_sub>.inner>.container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px 0;
+    }
+
+    .sc3_sub .container .s_txt {
+        display: none;
+    }
+
+    .sc3_sub .tra_img,
+    .sc3_sub .tcar_img,
+    .sc3_sub .re_img,
+    .sc3_sub .objc_img {
+        max-width: 250px;
+    }
+
+
+}
+
+@media screen and (max-width: 425px) {
+    footer {
+        padding: 30px 36px;
+    }
+
+    .footer_inner .up {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .footer_inner .up_txtbox {
+        font-size: 11px;
+    }
+
+    .footer_inner .up_txtbox {
+        display: flex;
+        gap: 9px;
+    }
+
+    .footer_inner .logo {
+        gap: 9px;
+    }
+
+    .footer_inner .logo a {
+        width: 20px;
+    }
+
+    .footer_inner .down_txtbox {
+        font-size: 11px;
+    }
+
+    .footer_inner .samdasu_logo {
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    footer {
+        padding: 17px 36px;
+    }
+
+
+
+    .footer_inner {
+        gap: 9px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    footer {
+        padding: 17px 36px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    footer {
+        padding: 0px 24px;
+    }
+}

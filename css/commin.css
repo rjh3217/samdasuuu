@@ -1,0 +1,663 @@
+header .inner {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    background: transparent;
+
+    transition:
+        background-color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* header 설정 시작~ */
+
+header nav {
+    width: 100%;
+}
+
+header .hd_menu {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    gap: 50px;
+}
+
+header .hd_menu li {
+    font-size: var(--intro_sub_txt);
+    color: var(--sub4_color);
+    font-weight: 700;
+
+    /* 글씨 색상 부드럽게 */
+    transition: color 0.4s ease;
+}
+
+
+/* 로고 영역 */
+.hd_logo {
+    position: relative;
+}
+
+/* 두 로고 공통 */
+.hd_logo .logo_white,
+.hd_logo .logo_blue {
+    transition: opacity 0.4s ease;
+}
+
+/* 흰색 로고 */
+.hd_logo .logo_white {
+    opacity: 1;
+}
+
+/* 파란색 로고 */
+.hd_logo .logo_blue {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+
+
+
+header:hover {
+    background-color: #fff;
+}
+
+header:hover .hd_logo .logo_white {
+    opacity: 0;
+}
+
+header:hover .hd_logo .logo_blue {
+    opacity: 1;
+}
+
+header:hover .hd_menu li {
+    color: var(--font_color);
+}
+
+
+
+header.hide {
+    transform: translateY(-100%);
+}
+
+/* =========================
+   MOBILE HEADER
+========================= */
+
+.mobile_header {
+    display: none;
+}
+
+
+/* 햄버거 버튼 */
+
+.mobile_menu_btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    padding: 5px;
+
+    border: 0;
+    background: transparent;
+
+    z-index: 99999;
+
+    cursor: pointer;
+}
+
+.mobile_menu_btn.active {
+    display: none;
+}
+
+.mobile_menu_btn span {
+    display: block;
+
+    width: 100%;
+    height: 4px;
+
+    margin: 5px 0;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+}
+
+
+/* 모바일 메뉴 */
+
+.mobile_menu {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 50vh;
+
+    background-color: #fff;
+
+    z-index: 99998;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* 메뉴 열렸을 때 */
+
+.mobile_menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 메뉴 상단 */
+
+.mobile_menu_top {
+    position: relative;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 로고 */
+
+.mobile_logo {
+    width: 80px;
+}
+
+.mobile_logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 닫기 버튼 */
+
+.mobile_close {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* X */
+
+.mobile_close span {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: #333;
+}
+
+.mobile_close span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile_close span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* 메뉴 */
+
+.mobile_menu nav {
+    margin-top: 20px;
+}
+
+.mobile_menu nav ul {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.mobile_menu nav li a {
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #333;
+}
+
+/* gotop button 설정 시작이용 */
+.gotop_wrap {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    z-index: 99999;
+
+
+}
+
+.gotop_wrap .gtxt {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.gotop_wrap.on .gtxt p {
+    color: #fff;
+}
+
+.gotop_wrap .gtxt p {
+    color: var(--font_color);
+    /* 평소 → 파란색 */
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.gotop_wrap .ellips_w,
+.gotop_wrap .ellips_b {
+    max-width: 35px;
+}
+
+.gotop_wrap .ellips_w img,
+.gotop_wrap .ellips_b img {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.gotop_wrap .ellips_w {
+    display: block;
+}
+
+.gotop_wrap .ellips_b {
+    display: none;
+
+}
+
+.gotop_wrap .warterr img {
+    animation: waterShake .7s ease-in-out infinite;
+}
+
+@keyframes waterShake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* SC3부터 파란색 */
+.gotop_wrap.on .ellips_w {
+    display: none;
+}
+
+.gotop_wrap.on .ellips_b {
+    display: block;
+
+}
+
+.gotop_wrap .gotop.hover .b_txt {
+    position: absolute;
+    right: 50px;
+
+    /* 물병 이미지 기준 세로 중앙 */
+    top: calc(100% - 35px);
+
+    padding: 8px 14px;
+    background: #fff;
+    border-radius: 20px;
+    border: 2px solid var(--main_color);
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-50%) translateX(100%);
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+
+    font-size: 14px;
+    color: var(--font_color);
+    font-weight: 500;
+}
+.gotop.hover {
+    position: relative;
+}
+
+.gotop.hover:hover .b_txt{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* 버튼 위치 */
+
+.btn_wrap {
+    max-width: 170px;
+
+    margin: 0 auto;
+
+    z-index: 2;
+
+    margin-top: 12%;
+}
+
+
+.btn {
+    width: 170px;
+    height: 48px;
+
+    position: relative;
+}
+
+
+/* 버튼 */
+
+.btn>a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2px);
+
+    border: 1.5px solid var(--sub4_color);
+    border-radius: 100px;
+
+    color: var(--font_color);
+    font-size: var(--btn_txt);
+    font-weight: 600;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* 버튼 호버 */
+
+.btn>a:hover {
+    background: rgba(0, 100, 250, 0.7);
+    backdrop-filter: blur(1px);
+
+    color: var(--sub4_color);
+}
+
+/* 버튼 텍스트 */
+
+.btn .txt {
+    font-size: var(--btn_txt);
+    font-weight: 600;
+    line-height: 1;
+
+    color: inherit;
+}
+
+/* 버튼 주변 원 */
+
+.sc1 .btn>a::before {
+    background-color: var(--sub4_color);
+}
+
+.btn>a::before {
+    content: '';
+
+    display: block;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background-color: var(--main_color);
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    margin: -7px;
+
+    transition: background-color 0.3s ease;
+
+    /* 원 이동경로 */
+    offset-path: rect(0px 100% 100% 0px round 100px);
+
+    offset-anchor: center center;
+
+    /* 이동 애니 */
+    animation: movecircle 8s linear infinite;
+
+    z-index: 3;
+}
+
+
+/* 버튼 원 애니 */
+
+@keyframes movecircle {
+
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
+    }
+
+}
+
+
+/* ---------- Hover 시 동글뱅이 ---------- */
+
+.btn>a:hover::before {
+    background-color: var(--sub4_color);
+}
+
+
+/* ---------- 화살표 ---------- */
+
+.btn .arrow img {
+    display: inline-block;
+
+    width: 20px;
+
+    transition: filter 0.3s ease;
+}
+
+
+/* ---------- Hover 시 화살표 이동 ---------- */
+
+.btn:hover .arrow {
+    animation: btnarrow 0.7s ease-in-out infinite;
+}
+
+
+@keyframes btnarrow {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* hover */
+
+.btn>a:hover .arrow img {
+    filter: brightness(0) invert(1);
+}
+
+/* 스크롤바 설정 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--main_color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    width: 100%;
+    height: 280px;
+    background-color: var(--main_color);
+    padding: 60px 200px;
+    position: relative;
+    top: -1px;
+}
+
+.footer_inner {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    column-gap: 50px;
+    row-gap: 25px;
+    position: relative;
+    color: #fff;
+}
+
+.footer_inner .up {
+    grid-column: 1 / 3;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_inner .up_txtbox {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer_inner .logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer_inner .logo a {
+    width: 37px;
+    height: auto;
+}
+
+.footer_inner .logo img {
+    width: 100%;
+}
+
+.footer_inner .down_txtbox {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 14px;
+    line-height: 1.6;
+    align-self: start;
+}
+
+.footer_inner .down_txtbox p {
+    margin-top: 5px;
+}
+
+.footer_inner .samdasu_logo {
+    grid-column: 2;
+    grid-row: 2;
+    width: 143px;
+    height: auto;
+    justify-self: end;
+    align-self: start;
+}
+
+.footer_inner .samdasu_logo img {
+    width: 100%;
+}
