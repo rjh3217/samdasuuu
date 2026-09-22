@@ -439,7 +439,7 @@
 @media screen and (max-width:425px) {
 
     section h1 {
-        --intro_title: 38px;
+        --intro_title: 36px;
         white-space: nowrap;
     }
 
