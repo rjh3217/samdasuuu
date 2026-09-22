@@ -115,9 +115,8 @@ body {
     scroll-behavior: smooth;
 }
 
-/* main */
+
 .intro {
-    /* background: url(../imges/bg1.png) center / cover no-repeat; */
     width: 100%;
     height: 1080px;
     z-index: 9;
@@ -162,7 +161,7 @@ body {
 
 .intro .arrow.a1 {
     margin-top: 50px;
-    width: 5%;
+    width: 7%;
     animation: arrow .9s ease infinite none;
 }
 
@@ -294,7 +293,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    gap: 160px;
+    gap: 110px;
+
+    background-image: repeating-linear-gradient(to right,
+            #8EC5E8 0,
+            #8EC5E8 6px,
+            transparent 6px,
+            transparent 12px);
+    background-size: 100% 2px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .section02 .content .step {
@@ -302,10 +310,12 @@ body {
     height: 430px;
     text-align: center;
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.88);
+    background: #fff;
     margin: 0;
     position: relative;
-    flex: 1;
+    flex: 1; 
+    z-index: 2;
+    background: #fff;
 }
 
 .section02 .content .step .step_num {
@@ -324,7 +334,8 @@ body {
 
     position: absolute;
     top: -7%;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%)
 }
 
 .section02 .content .sub_bg {
@@ -337,12 +348,12 @@ body {
 }
 
 .section02 .content .sub_bg.a2 {
-    margin-top: 70px;
+    margin-top: 73px;
 }
 
 .section02 .content .sub_bg.a3 {
-    padding-top: 6px;
-    width: 250px;
+    padding-top: 30px;
+    width: 270px;
     height: auto;
 }
 
@@ -353,20 +364,46 @@ body {
     font-weight: 600;
 }
 
-.section02 .line1 {
-    width: 130px;
+
+.section02 .step.a3 {
+    position: relative;
+}
+.section02 .step.a3::after {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 25%;
-    opacity: 60%;
+    bottom: -83px;
+    right: -61px;
+    width: 190px;
+    height: 200px;
+    background: url(../images/sub_2/success.png) no-repeat center / contain;
+
+    opacity: 0;
+    transform: translateY(-70px) scale(1.35) rotate(-7deg);
 }
 
-.section02 .line2 {
-    width: 130px;
-    position: absolute;
-    top: 50%;
-    left: 65%;
-    opacity: 60%;
+.section02 .step.a3.aos-animate::after {
+    animation: stamp 0.52s cubic-bezier(0.2, 0.8, 0.3, 1) 1.1s forwards;
+}
+
+@keyframes stamp {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px) scale(1.35) rotate(-7deg);
+    }
+
+    55% {
+        opacity: 0.8;
+        transform: translateY(4px) scale(0.96) rotate(-7deg);
+    }
+
+    75% {
+        transform: translateY(-2px) scale(1.01) rotate(-7deg);
+    }
+
+    100% {
+        opacity: 0.7;
+        transform: translateY(0) scale(1) rotate(-7deg);
+    }
 }
 
 .section02 .hashtag {
@@ -516,27 +553,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 120px;
+    gap: 70px;
     padding: 0 100px;
     margin-top: 8%;
 }
 
+.section03 .content.a1 .imgbox img {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 94%;
+}
+
 .section03 .content .imgbox {
     width: 280px;
-    padding: 10px;
-    height: auto;
+    height: 280px;
+    padding: 26px;
     background: rgba(255, 255, 255, 0.88);
     border-radius: 50%;
+    position: relative;
 }
 
 .section03 .content {
-    width: 280px;
+    width: 285px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
     flex-shrink: 0;
 }
+
+
+
 
 
 .section03 .content p {
@@ -564,6 +612,49 @@ body {
 
 .section03 .content_box .line img {
     height: 100%;
+}
+
+.section03 .content .imgbox {
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.section03 .content .imgbox img {
+    transition: transform 0.4s ease;
+}
+
+.section03 .content:hover .imgbox {
+    transform: translateY(-10px);
+    background: #fff;
+}
+
+.section03 .content.a1:hover .imgbox img {
+    transform: scale(1.08);
+}
+
+.section03 .content.a2:hover .imgbox img {
+    animation: benefitSwing 0.55s ease;
+}
+
+.section03 .content.a3:hover .imgbox img {
+    transform: translateY(-7px) scale(1.06);
+}
+
+@keyframes benefitSwing {
+    0% {
+        transform: rotate(0);
+    }
+
+    30% {
+        transform: rotate(-4deg);
+    }
+
+    60% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
 }
 
 
@@ -610,7 +701,7 @@ body {
     position: relative;
     z-index: 1;
     padding: 15px 40px;
-    border-radius: 32px;
+    border-radius: 50px;
     background: #4B93FF;
     font-size: var(--section_title);
     text-align: center;
@@ -717,4 +808,3 @@ body {
     word-break: keep-all;
     overflow-wrap: break-word;
 }
-

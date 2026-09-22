@@ -389,19 +389,19 @@ $(function(){
         ease: 'power2.out'
     })
   .from('.together .cardbox .card:nth-child(1)', {
-        y: 70,
+        y: 20,
         opacity: 0,
         duration: 1,
         ease: 'power2.out'
     })
   .from('.together .cardbox .card:nth-child(2)', {
-        y: 70,
+        y: 20,
         opacity: 0,
         duration: 1,
         ease: 'power2.out'
     },"<0.3")
   .from('.together .cardbox .card:nth-child(3)', {
-        y: 70,
+        y: 20,
         opacity: 0,
         duration: 1,
         ease: 'power2.out'
@@ -412,7 +412,7 @@ $(function(){
  // ========== gift ==========
  $('.gift').click(function() {
     // 클릭 시 지정한 html 파일로 이동
-    window.location.href = 'index2.html';
+    window.location.href = 'sub_2.html';
   });
 
 mm.add("(min-width: 769px)", () => {

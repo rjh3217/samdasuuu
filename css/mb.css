@@ -52,6 +52,8 @@ body {
 
     .section02 .content .sub_bg.a3 {
         width: 225px;
+        padding-top: 39px;
+
     }
 
     .section02 .hashtag h3 {
@@ -86,7 +88,7 @@ body {
     .section03 .content_box {
         justify-content: space-around;
         padding: 0 10px;
-        gap: 40px;
+        gap: 00px;
     }
 
     .section03 .content .imgbox {
@@ -231,14 +233,15 @@ body {
         padding: 10px 15px;
     }
 
-    .section02 .line1,
-    .section02 .line2 {
-        width: 70px;
+    .section02 .step.a3::after {
+        height: 150px;
+        width: 150px;
+        bottom: -61px;
+        right: -38px;
     }
 
-
     .section03 .inner {
-        padding: 0 90px;
+        padding: 0 40px;
     }
 
     .section03 .txt .line img {
@@ -279,11 +282,17 @@ body {
         font-size: 28px;
     }
 
-    .section03 .content_box .line {
-        height: 105px;
-        margin-top: 38px;
+    .section02 .content .sub_bg.a2 {
+        margin-top: 57px;
     }
 
+    .section02 .content .sub_bg.a3 {
+        padding-top: 26px;
+    }
+
+    .step:not(:last-child)::after {
+        display: none;
+    }
 
     .scetion04 .inner {
         width: 100%;
@@ -329,7 +338,7 @@ body {
 @media screen and (max-width: 768px) {
 
     .intro {
-        height: 600px;
+        height: 500px;
     }
 
     .intro .inner {
@@ -337,7 +346,7 @@ body {
     }
 
     .intro .title {
-        font-size: 30px;
+        font-size: 48px;
         line-height: 1.4;
     }
 
@@ -366,7 +375,7 @@ body {
     }
 
     .scetion01 .tit_txtbox {
-        font-size: 24px;
+        font-size: 36px;
         margin-bottom: 65px;
     }
 
@@ -426,7 +435,7 @@ body {
     }
 
     .section02 h2 {
-        font-size: 24px;
+        font-size: 36px;
         margin-bottom: 48px;
     }
 
@@ -466,12 +475,13 @@ body {
     }
 
     .section02 .content .sub_bg.a2 {
-        margin-top: 40px;
+        margin-top: 42px;
     }
 
     .section02 .content .sub_bg.a3 {
         width: 120px;
-        padding-top: -1px;
+        padding-top: 12px;
+        padding-bottom: 11px;
     }
 
     .section02 .content .step_txt {
@@ -480,9 +490,10 @@ body {
         margin-bottom: 10px;
     }
 
-    .section02 .line1,
-    .section02 .line2 {
-        display: none;
+    .section02 .step.a3::after {
+        width: 85px;
+        bottom: -54px;
+        right: -11px;
     }
 
     .section02 .hashtag {
@@ -512,7 +523,7 @@ body {
     }
 
     .section03 .txt h2 {
-        font-size: 24px;
+        font-size: 36px;
         flex-shrink: 0;
     }
 
@@ -563,6 +574,27 @@ body {
         margin-top: 25px;
     }
 
+    .section03 .content:hover .imgbox {
+        transform: translateY(-10px);
+        background: #fff;
+    }
+
+    .section03 .content.a1:hover .imgbox img {
+        transform: scale(1.08);
+    }
+
+    .section03 .content.a2:hover .imgbox img {
+        animation: benefitSwing 0.55s ease;
+    }
+
+    .section03 .content.a3:hover .imgbox img {
+        transform: translateY(-7px) scale(1.06);
+    }
+
+    .section03 .content:hover h3 {
+        transform: translateY(-3px);
+    }
+
     .scetion04 {
         padding: 140px 40px 120px;
         margin: 0;
@@ -588,7 +620,7 @@ body {
     .scetion04 .title_line h2 {
         width: 90px;
         padding: 7px 0;
-        font-size: 24px;
+        font-size: 36px;
     }
 
     .scetion04 .up_txtbox p {
@@ -610,13 +642,17 @@ body {
 }
 
 @media screen and (max-width: 650px) {
+    .intro .title {
+        font-size: 40px;
+    }
+
     .section02 .content .step {
         width: 120px;
         height: 170px;
     }
 
     .section02 .content {
-        gap: 25px;
+        gap: 10px;
     }
 
     .section02 .content .sub_bg {
@@ -627,25 +663,57 @@ body {
         width: 100px;
     }
 
+    .section02 .content .step_txt {
+        font-size: 13px;
+    }
+
+    .section02 .content .sub_bg.a3 {
+        padding-bottom: 5px;
+    }
+
+    .section02 .step.a3::after {
+        width: 80px;
+        bottom: -67px;
+        right: -19px;
+    }
+
     .section03 .content_box {
         gap: 4px
     }
 
     .section03 .content .imgbox {
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
     }
+
+    .section03 .content h3 {
+        font-size: 13px;
+    }
+
+    .section03 .content p {
+        font-size: 10px;
+    }
+
 }
 
 
 @media screen and (max-width: 425px) {
 
-
+    .intro {
+        font-size: 38px;
+        min-height: auto;
+        padding-bottom: 20px;
+    }
 
     .scetion01 {
-        margin-top: 50px;
-        overflow: hidden;
+        margin-top: 15px;
     }
+
+    .intro .title {
+        font-size: 38px;
+    }
+
+
 
     .scetion01 .inner {
         width: 100%;
@@ -657,7 +725,8 @@ body {
     .scetion01 .tit_txtbox {
         padding: 0 25px;
         margin-bottom: 55px;
-        font-size: 22px;
+        font-size: 30px;
+        font-weight: 600;
         text-align: center;
     }
 
@@ -732,14 +801,21 @@ body {
         word-break: keep-all;
     }
 
+    .section02 h2 {
+        font-size: 30px;
+    }
+
     .section02 .content {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 40px;
     }
 
     .section02 .content .step {
         margin-bottom: 10px;
+        width: 335px;
+        height: 170px;
     }
 
     .section02 .hashtag {
@@ -750,6 +826,26 @@ body {
         top: 103%;
     }
 
+    .section02 .content .step_txt {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .section02 .content {
+        background-image: none;
+    }
+
+    .section02 .su {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .section02 .step.a3::after {
+        width: 120px;
+        bottom: -60px;
+        right: -8px;
+    }
+
     .section03 {
         margin-top: 170px;
     }
@@ -758,11 +854,6 @@ body {
         width: 100%;
         padding: 0;
         overflow: hidden;
-    }
-
-    .section02 .content .step {
-        width: 335px;
-        height: 170px;
     }
 
 
@@ -779,13 +870,10 @@ body {
     }
 
     .section03 .txt h2 {
-        font-size: 22px;
+        font-size: 30px;
         flex-shrink: 0;
     }
 
-    .section02 .content .step_txt {
-        margin-bottom: 15px;
-    }
 
     .section03 .content_box {
         width: 100%;
@@ -802,6 +890,8 @@ body {
         scrollbar-width: none;
         gap: 12px;
     }
+
+
 
     .section03 .content_box::-webkit-scrollbar {
         display: none;
@@ -830,7 +920,7 @@ body {
 
     .section03 .content h3 {
         margin-top: 4px;
-        font-size: 17px;
+        font-size: 16px;
         white-space: nowrap;
         text-align: center;
     }
@@ -843,6 +933,11 @@ body {
         padding: 140px 40px 120px;
 
     }
+
+    .scetion04 .title_line h2 {
+        font-size: 30px;
+    }
+
 
     .scetion04 .inner {
         padding: 32px 20px 32px 20px;
@@ -903,5 +998,11 @@ body {
 
     .section03 .content_box {
         gap: 30px;
+    }
+
+    .section02 .step.a3::after {
+        width: 80px;
+        bottom: -65px;
+        right: -8px;
     }
 }
